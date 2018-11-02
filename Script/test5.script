@@ -1,4 +1,4 @@
-//Script to check that the results of a basic mathematical calculus with the + operator gives the right result
+//Script to check that the results of a basic mathematical calculus with the - operator gives the right result
 
 //Creation of a Chrome instance:
 my_bro = Browser("Chrome")
@@ -10,12 +10,12 @@ my_bro.Goto("www.google.com")
 my_query = my_bro.SearchItem("lst-ib")
 
 //Get the text to submit
-text = "2011+2018"
+text = "2011-2018"
 
 //Assuming there is basic manipulation of strings available
-number1 = parsefloat(strip(substring(text, 0 ,find(text, "+"))))
-number2 = parsefloat(strip(substring(text, find(text, "+") + 1 ,text.length))))
-number3 = number1 + number2
+number1 = parsefloat(strip(substring(text, 0 ,find(text, "-"))))
+number2 = parsefloat(strip(substring(text, find(text, "-") + 1 ,text.length))))
+number3 = number1 - number2
 
 //Submit a query
 my_query.Submit(text)
@@ -28,6 +28,6 @@ check = (number3 == result)
 
 //Display of the result
 if check then 
-display("Google is a good additioner")
+display("Google is a good subtracter")
 else
-display("Google can't even do an addition...")
+display("Google can't even do a subtraction...")
