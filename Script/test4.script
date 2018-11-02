@@ -13,9 +13,8 @@ my_query = my_bro.SearchItem("lst-ib")
 text = "2011+2018"
 
 //Assuming there is basic manipulation of strings available
-number1 = parsefloat(strip(substring(text, 0 ,find(text, "+"))))
-number2 = parsefloat(strip(substring(text, find(text, "+") + 1 ,text.length))))
-number3 = number1 + number2
+numbers = split(text, "+")
+number = numbers[0] + number[1]
 
 //Submit a query
 my_query.Submit(text)
@@ -24,7 +23,7 @@ my_query.Submit(text)
 result = parsefloat(my_bro.SearchItem("cwos"))
 
 //check the validity
-check = (number3 == result)
+check = (number == result)
 
 //Display of the result
 if check then 
