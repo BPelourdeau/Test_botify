@@ -1,0 +1,33 @@
+//Script to check that the results of a basic mathematical calculus with the + operator gives the right result
+
+//Creation of a Chrome instance:
+my_bro = Browser("Chrome")
+
+//Navigation to google
+my_bro.Goto("www.google.com")
+
+//Find the query field
+my_query = my_bro.SearchItem("lst-ib")
+
+//Get the text to submit
+text = "2011+2018"
+
+//Assuming there is basic manipulation of strings available
+number1 = parsefloat(strip(substring(text, 0 ,find(text, "+"))))
+number2 = parsefloat(strip(substring(text, find(text, "+") + 1 ,text.length))))
+number3 = number1 + number2
+
+//Submit a query
+my_query.Submit(text)
+
+//Get the result of the calculus in the page
+result = parsefloat(my_bro.SearchItem("cwos"))
+
+//check the validity
+check = (number3 == result)
+
+//Display of the result
+if check then 
+display("Google is a good additioner")
+else
+display("Google can't even do an addition...")
