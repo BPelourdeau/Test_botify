@@ -1,4 +1,4 @@
-//Script to check that the results of a basic mathematical calculus with the / operator gives the right result
+//Script to check that the results of a basic mathematical calculus with the % operator gives the right result
 
 //Creation of a Chrome instance:
 my_bro = Browser("Chrome")
@@ -13,8 +13,9 @@ my_query = my_bro.SearchItem("lst-ib")
 text = "2011/2018"
 
 //Assuming there is basic manipulation of strings available
-numbers = split(text, "/")
-number = parsefloat(numbers[0]) / parsefloat(numbers[1])
+number1 = substring(text, 0, find(text, "% of")) //find returns the first index of the substring in text
+number2 = substring(text, findlast(text, "% of"), text.length) //findlast returns the last index of the substring in text
+number = parsefloat(number1) * parsefloat(number2) / 100
 
 //Submit a query
 my_query.Submit(text)
@@ -27,6 +28,6 @@ check = (number == result)
 
 //Display of the result
 if check then 
-display("Google is a good divisoner")
+display("Google is a good purcentager")
 else
-display("Google can't even do a division...")
+display("Google can't even do a purcentage...")
