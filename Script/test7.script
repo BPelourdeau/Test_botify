@@ -1,4 +1,4 @@
-//Script to check that the results of a basic mathematical calculus with the * operator gives the right result
+//Script to check that the results of a basic mathematical calculus with the / operator gives the right result
 
 //Creation of a Chrome instance:
 my_bro = Browser("Chrome")
@@ -10,11 +10,11 @@ my_bro.Goto("www.google.com")
 my_query = my_bro.SearchItem("lst-ib")
 
 //Get the text to submit
-text = "2011*2018"
+text = "2011/2018"
 
 //Assuming there is basic manipulation of strings available
-numbers = split(text, "*")
-number = parsefloat(numbers[0]) * parsefloat(numbers[1])
+numbers = split(text, "/")
+number = parsefloat(numbers[0]) / parsefloat(numbers[1])
 
 //Submit a query
 my_query.Submit(text)
@@ -27,6 +27,6 @@ check = (number == result)
 
 //Display of the result
 if check then 
-display("Google is a good multiplicator")
+display("Google is a good divisoner")
 else
-display("Google can't even do a multiplication...")
+display("Google can't even do a division...")
