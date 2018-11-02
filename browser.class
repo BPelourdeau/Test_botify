@@ -17,7 +17,7 @@ Browser{
   
 }
 
-Goto(String url){
+Goto(url){
   //This is a function that a standard driver should have. For example, if you replace url by "www.google.com", it should navigate to
   //that page
 }
