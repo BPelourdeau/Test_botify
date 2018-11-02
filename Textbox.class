@@ -1,0 +1,11 @@
+//Just a simple class to submit queries to the browser in the google page
+
+Textbox{
+
+  //Constructor
+  Textbox()
+  
+  //This method speaks for its own... it will submit the query in the textbox, as if a user typed directly in it and then pressed the
+  //return key
+  Submit(query){...}
+}
