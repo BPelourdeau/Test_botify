@@ -1,0 +1,22 @@
+//Script to make a query on google and check that the resulting page has 10 items
+
+//Creation of a Chrome instance:
+my_bro = Browser("Chrome")
+
+//Navigation to google
+my_bro.Goto("www.google.com")
+
+//Find the query field
+my_query = my_bro.SearchItem("lst-ib")
+
+//Submit a query
+my_query.Submit("What is SEO ?")
+
+//Get the list of results
+results = my_bro.SearchTheItems("LC201b")
+
+//Check will contain a boolean validating the 10 results
+check = (results.length == 10)
+
+//A little popup to tell the result:
+If check Then display("10 results found") Else display("Only " + results.length + " results found!")
