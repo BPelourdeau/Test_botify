@@ -1,0 +1,37 @@
+//This file describes the functioning of the class browser and especially of its methods. This method is represented her to clarify the
+//script, but should be implemented in the driver of the browser.
+
+Browser{
+
+  //Constructor, it starts an instance of a browser
+  Browser(bro)
+  
+  //Method to go to a certain url
+  Goto(url)
+  
+  //Method to look for a certain item in the page and return the item
+  SearchItem(id) --> item
+  
+  //Method to look through all the items of a certain class inside the page and return a list of these items
+  SearchTheItems(class) --> [items]
+  
+}
+
+Goto(String url){
+  //This is a function that a standard driver should have. For example, if you replace url by "www.google.com", it should navigate to
+  //that page
+}
+
+SearchItem(id){
+  //This function will scan the html tags of the page looking for the one with the right "id" field
+  //By inspecting elements of a page in Chrome, Firefox and Edge, one can see for example that the id of the query field in google, is
+  //always labeled "lst-ib" and that a result of a basic mathematical calculus is always labeled "cwos"
+  //When the right item has been found, the function will return the item. (a Textbox in the case of a query filed and a String in case of
+  //a simple text)
+}
+
+SearchTheItems(class){
+  //It's the same as SearchItem but instead of looking for the "id" field, it will look for the right "class" field. At each element found,
+  //the function will add its content to the list of [items].
+  //For example, the class of the titles of the results of a research in google is always "LC201b"
+}
