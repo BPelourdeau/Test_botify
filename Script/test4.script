@@ -14,7 +14,7 @@ text = "2011+2018"
 
 //Assuming there is basic manipulation of strings available
 numbers = split(text, "+")
-number = numbers[0] + number[1]
+number = parsefloat(numbers[0]) + parsefloat(number[1])
 
 //Submit a query
 my_query.Submit(text)
