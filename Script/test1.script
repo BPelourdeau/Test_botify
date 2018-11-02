@@ -1,0 +1,31 @@
+//Script to check that the results of a search with "site:" in the query are on the right host
+
+//Creation of a Chrome instance:
+my_bro = Browser("Chrome")
+
+//Navigation to google
+my_bro.Goto("www.google.com")
+
+//Find the query field
+my_query = my_bro.SearchItem("lst-ib")
+
+//Get the text to submit
+text = "javascript site: openclassrooms.com"
+
+//Assuming there is basic manipulation of strings available
+site = strip(substring(text, findlast(text, "site:") ,text.length)))
+
+//Submit a query
+my_query.Submit(text)
+
+//Get the list of results
+results = my_bro.SearchTheItems("LC201b")
+
+//Look into the results to see if the site is well in the host
+check = true
+for i = 1 to results.length
+  if not find(results[i-1], site) then check = false
+end for
+
+//Display of the result
+if check then display("All results are in " + site) else display("There are some results that are not in " + site + "!")
