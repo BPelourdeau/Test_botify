@@ -3,7 +3,7 @@
 
 Browser{
 
-  //Constructor, it starts an instance of a browser
+  //Constructor, it starts an instance of the browser bro installed on your system
   Browser(bro)
   
   //Method to go to a certain url
