@@ -10,12 +10,10 @@ my_bro.Goto("www.google.com")
 my_query = my_bro.SearchItem("lst-ib")
 
 //Get the text to submit
-text = "2011/2018"
+text = "2011% of2018"
 
 //Assuming there is basic manipulation of strings available
-number1 = substring(text, 0, find(text, "% of")) //find returns the first index of the substring in text
-number2 = substring(text, findlast(text, "% of"), text.length) //findlast returns the last index of the substring in text
-number = parsefloat(number1) * parsefloat(number2) / 100
+number = calculate(text)
 
 //Submit a query
 my_query.Submit(text)
