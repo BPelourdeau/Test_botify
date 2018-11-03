@@ -1,3 +1,4 @@
+//This function calculates the expression passed in argument using basic string manipulation
 calculate(expr){
   if found(expr, "+")
     numbers = split(expr, "+")
