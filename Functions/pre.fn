@@ -1,0 +1,19 @@
+calculate(expr){
+  if found(expr, "+")
+    numbers = split(expr, "+")
+    number = parsefloat(numbers[0]) + parsefloat(numbers[1])
+  else if found(expr, "-")
+    numbers = split(expr, "-")
+    number = parsefloat(numbers[0]) - parsefloat(numbers[1])
+  else if found(expr, "*")
+    numbers = split(expr, "*")
+    number = parsefloat(numbers[0]) * parsefloat(numbers[1])
+  else if found(expr, "/")
+    numbers = split(expr, "/")
+    number = parsefloat(numbers[0]) / parsefloat(numbers[1])
+  else if found(expr, "% of")
+    number1 = substring(expr, 0, find(expr, "% of"))
+    number2 = substring(expr, findlast(expr, "% of")+1, expr.length)    
+    number = parsefloat(number1) * parsefloat(number2) / 100
+  return number
+}
