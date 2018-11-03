@@ -1,0 +1,6 @@
+find_liste(liste, mot)
+  for i = 1 to liste.length
+    if not find(liste[i-1], mot) then check = false
+  end for
+  return check
+  
