@@ -27,9 +27,7 @@ check = (results.length == 10)
 
 //Look into the results to see if the site is well in the host
 if check then
-  for i = 1 to results.length
-    if not find(results[i-1], filetype) then check = false
-  end for
+  check = find_list(results,filetype)
 end if
 
 //Display of the result
