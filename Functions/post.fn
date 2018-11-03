@@ -1,4 +1,4 @@
-find_liste(liste, mot)
+find_liste(liste, mot){
 
   for i = 1 to liste.length
 
@@ -7,5 +7,5 @@ find_liste(liste, mot)
   end for
 
   return check
-
+}
   
