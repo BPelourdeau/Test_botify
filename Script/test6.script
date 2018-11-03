@@ -13,8 +13,7 @@ my_query = my_bro.SearchItem("lst-ib")
 text = "2011*2018"
 
 //Assuming there is basic manipulation of strings available
-numbers = split(text, "*")
-number = parsefloat(numbers[0]) * parsefloat(numbers[1])
+number = calculate(text)
 
 //Submit a query
 my_query.Submit(text)
